@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: argonginx
 spec:
   selector:
-    app: nginx
+    app: argonginx
   type: LoadBalancer
   ports:
-    - name: nginx
+    - name: argonginx
       protocol: TCP
       port: 80
       targetPort: 80
