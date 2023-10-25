@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: argonginx
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: argonginx
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: nginx
+        app: argonginx
     spec:
       containers:
       - image: nginx:latest
-        name: nginx
+        name: argonginx
         resources:
           requests:
             memory: 128Mi
@@ -28,5 +28,5 @@ spec:
         ports:
         - containerPort: 80
           protocol: TCP
-          name: nginx
+          name: argonginx
 
