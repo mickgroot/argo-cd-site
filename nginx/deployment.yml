@@ -15,7 +15,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - image: stijn2405/stijnweb:v5
+      - image: mickgroot/nginx:latest
         name: nginx
         resources:
           requests:
