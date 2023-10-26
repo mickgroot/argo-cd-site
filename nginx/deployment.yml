@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: nginx-test
 spec:
   selector:
     matchLabels:
-      app: nginx
+      app: nginx-test
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: nginx
+        app: nginx-test
     spec:
       containers:
       - image: mickgroot/nginx:latest
         imagePullPolicy: Always
-        name: nginx
+        name: nginx-test
         resources:
           requests:
             cpu: 50m
@@ -26,5 +26,5 @@ spec:
         ports:
         - containerPort: 80
           protocol: TCP
-          name: nginx
+          name: nginx-test
 
