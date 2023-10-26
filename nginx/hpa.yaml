@@ -1,13 +1,13 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: nginx
-  namespace: nginx
+  name: nginx-test
+  namespace: nginx-test
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: nginx
+    name: nginx-test
   minReplicas: 1
   maxReplicas: 10
   metrics:
